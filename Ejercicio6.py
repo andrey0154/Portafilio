@@ -4,8 +4,8 @@ dias_por_semana = int(input("¿días a la semana viaja a la universidad?: "))
 
 semanas_por_cuatrimestre = 15
 
-# Calcular costo total de traslado
+
 costo_total = distancia_casa_universidad * costo_por_km * dias_por_semana * 2 * semanas_por_cuatrimestre  # Ida y vuelta
 
-# resultado
+
 print(f"\nEl costo total de trasladarse a la universidad por cuatrimestre es: {costo_total:.2f} colones")

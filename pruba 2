@@ -1,0 +1,47 @@
+usuarios = []
+contrasenas = []
+
+# Ingreso como cliente registrado
+while True:
+    opcion = input("Desea registrarse (SI/NO): ")
+    if opcion.lower() == "no" or opcion.lower() == "no":
+        print("Saliendo del registro.")
+        break
+    elif opcion.lower() == "si" or opcion.lower() == "si":
+        usuario = input("Ingrese su usuario: ")
+        contrasena = input("Ingrese su contraseña: ")
+        print ("***********************")
+        usuarios.append(usuario)
+        contrasenas.append(contrasena)
+        print("Registro exitoso.")
+        break
+
+# Inicio de sesión
+intentos = 2
+while intentos > 0:
+    usuario_ingreso = input("Ingrese su usuario: ")
+    contrasena_ingreso = input("Ingrese su contraseña: ")
+
+    if (
+        usuario_ingreso in usuarios
+        and contrasenas[usuarios.index(usuario_ingreso)] == contrasena_ingreso
+    ):
+        print("Inicio de sesión exitoso.")
+        break
+    else:
+        print("Error en el usuario o contraseña. Intentos restantes:", intentos)
+        intentos -= 1
+
+if intentos == 0:
+    print("Se agotaron los intentos. Saliendo del programa.")
+
+# Ingreso como invitado o salir del programa
+while True:
+    print("\n3. Ingresar como invitado")
+    print("4. Salir")
+    opcion = input("Seleccione una opción: ")
+    if opcion == "3":
+        print("Ingreso como invitado.")
+    elif opcion == "4":
+        print("Saliendo del programa.")
+        break

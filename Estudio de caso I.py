@@ -16,7 +16,6 @@ for _ in range(5):
     nombre = input("Nombre del miembro: ")
     cedula = input("Número de cédula: ")
     aporte = int(input("Monto aportado (500, 1000, 2000 o 5000 colones): "))
-    aporte = int (aportes)
 
     if aportes in numeros_ganadores:
         miembros[cedula] = {"nombre": nombre, "monto": aportes}

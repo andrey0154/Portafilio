@@ -1,0 +1,27 @@
+usuarios = []
+contrasenas = []
+
+# Ingreso como cliente registrado
+
+usuario = input("Ingrese su usuario: ")
+contrasena = input("Ingrese su contraseña: ") 
+print ("***********************")
+
+usuarios.append(usuario)
+contrasenas.append(contrasena)
+while True:
+    Opcion = input("Desea ingresar al sistema")
+    if Opcion=="SI"or"Si":
+
+        
+        for intento in range(3):
+            usuario_ingreso = input("Ingrese su usuario: ")
+            contrasena_ingreso = input("Ingrese su contraseña: ")
+
+        if usuario_ingreso in usuarios and contrasena_ingreso == contrasenas[usuarios.index(usuario_ingreso)]:
+            print("Inicio de sesión exitoso.")
+            break
+    else:
+        print("Error en el usuario o contraseña. Intentos restantes:", 2 - intento)
+    if intento == 2:
+            print("Se agotaron los intentos. Saliendo del programa.")
